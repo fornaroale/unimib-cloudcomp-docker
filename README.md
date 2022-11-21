@@ -4,8 +4,7 @@ Per fare build e deploy della webapp è sufficiente eseguire il comando `docker-
 
 Una volta avviata l'applicazione, è possibile accedere all'interfaccia dal seguente indirizzo:  
 http://localhost:3031/employee/show
-
-Per terminare webapp e relativo db, è sufficiente eseguire il comando `docker-compose down`
+Attenzione: l'avvio del database richiede un po' di tempo; ovviamente, finchè non è completo, la webapp non sarà funzionante. Sulla macchina virtuale fornita per il laboratorio, il database impiega un tempo piuttosto lungo (30 secondi circa), dopo i quali in automatico la webapp si connette al DB. Infine, per terminare webapp e relativo db, è sufficiente eseguire il comando `docker-compose down`
 
 ## Introduzione alla WebApp
 
