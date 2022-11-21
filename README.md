@@ -1,14 +1,11 @@
 ## Comandi
 
-Per fare build e deploy della webapp è sufficiente eseguire il comando:
-     docker-compose up -d
-all'interno della directory in cui si è unzippato il file compresso .zip
+Per fare build e deploy della webapp è sufficiente eseguire il comando `docker-compose up -d` all'interno della directory in cui si è unzippato il file compresso .zip
 
-Una volta avviata l'applicazione, è possibile accedere all'interfaccia dal seguente indirizzo:
-     http://localhost:3031/employee/show
+Una volta avviata l'applicazione, è possibile accedere all'interfaccia dal seguente indirizzo:  
+http://localhost:3031/employee/show
 
-Per terminare webapp e relativo db, è sufficiente eseguire il comando:
-     docker-compose down
+Per terminare webapp e relativo db, è sufficiente eseguire il comando `docker-compose down`
 
 ## Introduzione alla WebApp
 
