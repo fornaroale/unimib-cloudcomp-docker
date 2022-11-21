@@ -1,0 +1,49 @@
+version: '1.0'
+
+services:
+  mysqldb:
+    image: mysql:8
+    volumes:
+      - type: volume
+        source: spring-vol
+        target: /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=pwdnuova
+      - MYSQL_DATABASE=new
+    ports:
+      - "3306:3306"
+      - "33060:33060"
+    networks:
+      - spring-net
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 1gb
+  webapp:
+    build: .
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqldb:3306/new?createDatabaseIfNotExist=true
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=pwdnuova
+    ports:
+      - "3031:3031"
+    networks:
+      - spring-net
+    depends_on:
+      - mysqldb
+    restart: on-failure
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 1gb
+
+networks:
+  spring-net:
+    driver: bridge
+
+volumes:
+  spring-vol:
+    driver: local

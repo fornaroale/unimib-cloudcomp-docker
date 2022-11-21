@@ -1,0 +1,42 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <title>Register</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link"
+                                    th:href="@{/employee/all}">Data</a></li>
+            <li class="nav-item"><a class="nav-link"
+                                    th:href="@{/employee/show}">Register</a></li>
+        </ul>
+    </nav>
+    <div class="card">
+        <div class="card-header bg-primary text-white text-center">
+            <h2>Employee Register Page</h2>
+        </div>
+        <div class="card-body">
+            <form method="post" th:action="@{/employee/register}">
+                Name : <input type="text" name="empName" class="form-control">
+                Salary : <input type="text" name="empSal" class="form-control">
+                Gender : <input type="radio" value="male" name="empGen">Male
+                <input type="radio" value="female" name="empGen">Female <br>
+                Email: <input type="text" name="email" class="form-control">
+                Department : <select class="form-control" name="empDept">
+                <option value="">-select-</option>
+                <option value="DEV">DEV</option>
+                <option value="QA">QA</option>
+                <option value="BA">BA</option>
+            </select> Birth date : <input type="date" name="empDoj" class="form-control" /> <input
+                    type="submit" value="register" class="btn btn-outline-success">
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
