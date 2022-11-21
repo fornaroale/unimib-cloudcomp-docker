@@ -1,8 +1,8 @@
-COMANDI:
+## Comandi
 
 Per fare build e deploy della webapp è sufficiente eseguire il comando:
      docker-compose up -d
-all'interno della directory in cui si è unzippato il file compresso .zip.
+all'interno della directory in cui si è unzippato il file compresso .zip
 
 Una volta avviata l'applicazione, è possibile accedere all'interfaccia dal seguente indirizzo:
      http://localhost:3031/employee/show
@@ -10,7 +10,7 @@ Una volta avviata l'applicazione, è possibile accedere all'interfaccia dal segu
 Per terminare webapp e relativo db, è sufficiente eseguire il comando:
      docker-compose down
 
---------------------------
+## Introduzione alla WebApp
 
 Per eseguire questo esercizio ho scaricato una semplice web-app SpringBoot da Internet (presso https://realnamehiddenn.blogspot.com/2022/07/spring-boot-crud-web-application.html), apportando qualche semplice modifica per utilizzare le ultime versioni di Maven e Java. Si tratta di un progetto molto semplice e con pochi controlli relativi agli inserimenti effettuati dall'utente da tastiera. Tuttavia, questo progetto consente di svolgere operazioni basilari CRUD su un database MySQL, perciò l'ho ritenuto adatto a questo esercizio.
 
